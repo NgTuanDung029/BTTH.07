@@ -1,10 +1,40 @@
-const chooseCity = document.querySelector('#choose-city');
-const city = document.querySelector('.city');
+//Requied Zip Code
+var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+const zipCodeID = document.getElementById("zipCodeID");
+const statusOfZipCode = document.querySelector(".statusOfZipCode");
 
-chooseCity.addEventListener('focusout', chooseCityCheck);
+zipCodeID.addEventListener("focus", function() {
+  this.style.border = "1px solid red";
+});
 
-function chooseCityCheck(){
-    console.log("abc");
-}
+zipCodeID.addEventListener("blur", function() {
+    this.style.border = "1px solid #ccc";
+    if (isValidZip.test(zipCodeID.value)) {
+        statusOfZipCode.textContent = "Valid Zip Code";
+        statusOfZipCode.style.color = "green";
+    } else {
+        statusOfZipCode.textContent = "Invalid Zip Code";
+        statusOfZipCode.style.color = "red";
+    }
+});
 
+// Required Email
+var emailRex =   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const email = document.getElementById("email");
+const statusOfEmail = document.querySelector(".statusOfEmail");
 
+email.addEventListener("focus", function() {
+    this.style.border = "1px solid red";
+    }
+);
+
+email.addEventListener("blur", function() {
+    this.style.border = "1px solid #ccc";
+    if (emailRex.test(email.value)) {
+        statusOfEmail.textContent = "Valid Email";
+        statusOfEmail.style.color = "green";
+    } else {
+        statusOfEmail.textContent = "Invalid Email";
+        statusOfEmail.style.color = "red";
+    }
+});
