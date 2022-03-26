@@ -1,3 +1,23 @@
+//Required Name
+var nameRex = /^[a-zA-Z ]+$/;
+const nameID = document.getElementById('nameID');
+const statusOfNameID = document.querySelector('.statusOfNameID');
+
+nameID.addEventListener('focus', function(){
+    this.style.border = "1px solid red";
+})
+
+nameID.addEventListener('blur',function(){
+    this.style.border = "1px solid #ccc";
+    if(nameRex.test(nameID.value)){
+        statusOfNameID.textContent = "Valid Name";
+        statusOfNameID.style.color = "green";
+    }else{
+        statusOfNameID.textContent = "Invalid Name";
+        statusOfNameID.style.color = "red";
+    }
+})
+
 //Requied Zip Code
 var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
 const zipCodeID = document.getElementById("zipCodeID");
