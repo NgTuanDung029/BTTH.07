@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            User ID:
+        </div>
+        <div class="col">
+            <input type="text" name = "userID" id="userID">
+            <span class="statusOfUserID"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Password:
+        </div>
+        <div class="col">
+            <input type="password" name = "password" id="password">
+            <span class="statusOfPassWord"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Name
+        </div>
+        <div class="col">
+            <input type="text" name = "nameID" id="nameID">
+            <span class="statusOfNameID"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Country
+        </div>
+        <div class="col">
+            <select id="city-province">
+                    <option value = "">Chọn Tỉnh/Thành Phố...</option>
+                    <option value="1">Thành phố Hà Nội</option>
+                    <option value="2">Thành phố Hồ Chí Minh</option>
+                    <option value="3">Thành phố Hải Phòng</option>
+                    <option value="4">Thành phố Đà Nẵng</option>
+            </select>
+            <span class="statusOfCountry"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            ZIP code
+        </div>
+        <div class="col">
+            <input type="text" name = "zipCode" id="zipCodeID">
+            <span class="statusOfZipCode"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Email:
+        </div>
+        <div class="col">
+            <input type="text" name = "email" id="email">
+            <span class="statusOfEmail"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Sex:
+        </div>
+        <div class="col">
+            <input type="radio" name="sexID" id="sexMale" value="Male">
+            <label for="sexMale">Male</label>
+            <input type="radio" name="sexID" id="sexFemale" value="Female">
+            <label for="sexFemale">Female</label><br>
+            <span id="statusOfSex"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Language:
+        </div>
+        <div class="col">
+            <input type="checkbox" name="language" id="langEng">
+            <label for="langEng">English</label>
+            <input type="checkbox" name="language" id="langNonEng">
+            <label for="langNonEng">Non English</label><br>
+            <span id="statusOfLanguage"></span>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
