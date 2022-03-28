@@ -74,4 +74,53 @@ $("#btnRegister").click(function (e) {
     }
 })
 
+function checkZipcode() {
+    let Zipcode = $('#zipCodeID').val()
+    let ZipcodeRegex = /^[0-9]+$/
+    if (ZipcodeRegex.test(Zipcode)) {
+        return true
+    }
+    return false
+}
+function checkEmail() {
+    let email = $('#email').val()
+    let EmailRegex = /\S+@\S+.\S+/
+    if (EmailRegex.test(email)) {
+        return true
+    }
+    return false
+}
+$("#btnRegister").click(function (e) {
+    e.preventDefault();
+    if (checkZipcode()) {
+        $(".statusOfZipCode").text('Zipcode hợp lệ')
+        $(".statusOfZipCode").css('color', 'blue')
+    } else {
+        $(".statusOfZipCode").text('Zipcode không hợp lệ')
+        $(".statusOfZipCode").css('color', 'red')
+    }
+    if (checkEmail()) {
+        $(".statusOfEmail").text('Email hợp lệ')
+        $(".statusOfEmail").css('color', 'blue')
+    } else {
+        $(".statusOfEmail").text('Email không hợp lệ')
+        $(".statusOfEmail").css('color', 'red')
+    }
+})
+ 
+$("#btnRegister").click(function (e) {
+    e.preventDefault();
+    if ($('div.radio.required :radio:checked').length == 0) {
+        $("#statusOfSex").text('Mời chọn giới tính')
+        $("#statusOfSex").css('color', 'red')
+    }
+})
+ 
+$("#btnRegister").click(function (e) {
+    e.preventDefault();
+    if ($('div.checkbox.required :checkbox:checked').length == 0) {
+        $("#statusOfLanguage").text('Mời chọn ngôn ngữ')
+        $("#statusOfLanguage").css('color', 'red')
+    }
+})
 
