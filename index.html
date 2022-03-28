@@ -36,6 +36,14 @@
     </div>
     <div class="row">
         <div class="col">
+            Address
+        </div>
+        <div class="col">
+            <input type="text" name = "address" id="address">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             Country
         </div>
         <div class="col">
@@ -84,13 +92,15 @@
             Language:
         </div>
         <div class="col">
-            <input type="checkbox" name="language" id="langEng">
+            <input type="radio" name="languageID" id="langEng">
             <label for="langEng">English</label>
-            <input type="checkbox" name="language" id="langNonEng">
+            <input type="radio" name="languageID" id="langNonEng">
             <label for="langNonEng">Non English</label><br>
             <span id="statusOfLanguage"></span>
         </div>
     </div>
-    <script src="/app.js"></script>
+    <textarea name="mess" id="" cols="30" rows="10" placeholder="Optional"></textarea><br>
+    <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" disabled>    
+    <script src="/YC1.js"></script>
 </body>
 </html>
