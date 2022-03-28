@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="row">
-        <div class="col">
-            User ID:
+    <div class="form">
+        <div class="text-header">
+            Registration Form
         </div>
-        <div class="col">
-            <input type="text" name = "userID" id="userID">
-            <span class="statusOfUserID"></span>
+        <div class="row">
+            <div class="col">
+                User ID:
+            </div>
+            <div class="col">
+                <input type="text" name="userID" id="userID">
+                <span class="statusOfUserID"></span>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Password:
+        <div class="row">
+            <div class="col">
+                Password:
+            </div>
+            <div class="col">
+                <input type="password" name="password" id="password">
+                <span class="statusOfPassWord"></span>
+            </div>
         </div>
-        <div class="col">
-            <input type="password" name = "password" id="password">
-            <span class="statusOfPassWord"></span>
+        <div class="row">
+            <div class="col">
+                Name:
+            </div>
+            <div class="col">
+                <input type="text" name="nameID" id="nameID">
+                <span class="statusOfNameID"></span>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Name
+        <div class="row">
+            <div class="col">
+                Address:
+            </div>
+            <div class="col">
+                <input type="text" name="address" id="address">
+            </div>
         </div>
-        <div class="col">
-            <input type="text" name = "nameID" id="nameID">
-            <span class="statusOfNameID"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Address
-        </div>
-        <div class="col">
-            <input type="text" name = "address" id="address">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Country
-        </div>
-        <div class="col">
-            <select id="city-province">
-                    <option value = "">Chọn Tỉnh/Thành Phố...</option>
+        <div class="row">
+            <div class="col">
+                Country:
+            </div>
+            <div class="col">
+                <select id="city-province">
+                    <option value="">Chọn Tỉnh/Thành Phố...</option>
                     <option value="1">Thành phố Hà Nội</option>
                     <option value="2">Thành phố Hồ Chí Minh</option>
                     <option value="3">Thành phố Hải Phòng</option>
                     <option value="4">Thành phố Đà Nẵng</option>
-            </select>
-            <span class="statusOfCountry"></span>
+                </select>
+                <span class="statusOfCountry"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                ZIP code:
+            </div>
+            <div class="col">
+                <input type="text" name="zipCode" id="zipCodeID">
+                <span class="statusOfZipCode"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Email:
+            </div>
+            <div class="col">
+                <input type="text" name="email" id="email">
+                <span class="statusOfEmail"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Sex:
+            </div>
+            <div class="radio col">
+                <input type="radio" name="sexID" id="sexMale" value="Male">
+                <label for="sexMale">Male</label>
+                <input type="radio" name="sexID" id="sexFemale" value="Female">
+                <label for="sexFemale">Female</label><br>
+                <span id="statusOfSex"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Language:
+            </div>
+            <div class="checkbox col">
+                <input type="checkbox" name="language" id="langEng">
+                <label for="langEng">English</label>
+                <input type="radio" name="languageID" id="langNonEng">
+                <label for="langNonEng">Non English</label><br>
+                <span id="statusOfLanguage"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">About:</div>
+            <div class="col">
+                <textarea name="mess" id="textAbout" cols="30" rows="10" placeholder="Optional"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input type="submit" name="btnRegister" id="btnRegister" value="submit">
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            ZIP code
-        </div>
-        <div class="col">
-            <input type="text" name = "zipCode" id="zipCodeID">
-            <span class="statusOfZipCode"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Email:
-        </div>
-        <div class="col">
-            <input type="text" name = "email" id="email">
-            <span class="statusOfEmail"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Sex:
-        </div>
-        <div class="radio col">
-            <input type="radio" name="sexID" id="sexMale" value="Male">
-            <label for="sexMale">Male</label>
-            <input type="radio" name="sexID" id="sexFemale" value="Female">
-            <label for="sexFemale">Female</label><br>
-            <span id="statusOfSex"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Language:
-        </div>
-<<<<<<< HEAD:YC1/index.html
-        <div class="checkbox col">
-            <input type="checkbox" name="language" id="langEng">
-=======
-        <div class="col">
-            <input type="radio" name="languageID" id="langEng">
->>>>>>> af4d966220ef24ba0fdd93e577492c5645559863:index.html
-            <label for="langEng">English</label>
-            <input type="radio" name="languageID" id="langNonEng">
-            <label for="langNonEng">Non English</label><br>
-            <span id="statusOfLanguage"></span>
-        </div>
-    </div>
-<<<<<<< HEAD:YC1/index.html
-    <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col">
-            <input type="submit" name="btnRegister" id="btnRegister" value="submit">
-        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- <script src="/app.js"></script> -->
     <script src="yc2.js"></script>
-=======
-    <textarea name="mess" id="" cols="30" rows="10" placeholder="Optional"></textarea><br>
-    <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" disabled>    
-    <script src="/YC1.js"></script>
->>>>>>> af4d966220ef24ba0fdd93e577492c5645559863:index.html
 </body>
-</html>
